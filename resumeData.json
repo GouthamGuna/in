@@ -1,0 +1,157 @@
+{
+  "main": {
+    "name":"Gowtham Sankar",
+    "description":"I am a Java Full stack developer I use Eclipse Java EE ,Spring Tool Suite IDE for Dynamic web Developer and Learning to study AWS Associate Developer Certification, practice for coursera project network",
+    "image":"profilepic.jpg",
+    "bio":"Aspired to pursue career opportunities in Java Full stack developer and Cloud developing, designing, maintaining, and enhancing the cloud infrastructure of web applications with an organization of repute.",
+    "contactmessage":"Here is where you should write your message to readers to have them get in contact with you.",
+    "email": "ggowthamsankar@gmail.com",
+    "phone": "7868949536",
+    "github":"https://mail.google.com/mail/u/0/#inbox?compose=DmwnWrRvwLwRjLfdvkntTsblbmvjJHGlfxmgjvJMslxSKMCTBzXTGBkwPZNtftQJGqKjzNhtPScb",
+    "project":"https://github.com/GouthamGuna?tab=repositories",
+    "address":{
+      "street":"(Your Street)",
+      "city":"(Your City)",
+      "state":"(Your State)",
+      "zip": "(Your Zip/Postal Code)"
+    },
+    "website": "http://www.timbakerdev.com",
+    "resumedownload":"https://docs.google.com/document/d/1uPDJJudUO6d-edCnSKNS5nrjGMW8-XYFw0QWD5hx1Ok/edit?usp=sharing",
+    "social":[
+      {
+        "name":"facebook",
+        "url":"https://www.facebook.com/",
+        "className":"fa fa-facebook"
+      },
+      {
+        "name":"twitter",
+        "url":"https://twitter.com/GSgowtham24?t=V3nH6bec3ejYRUaAaEfHzw&s=09",
+        "className":"fa fa-twitter"
+      },
+      {
+        "name":"linkedin",
+        "url":"https://www.linkedin.com/login",
+        "className":"fa fa-linkedin"
+      },
+      {
+        "name":"instagram",
+        "url":"https://mec.edu.in/news-events/students-techtalk-on-electric-power-transmission-and-distribution/",
+        "className":"fa fa-external-link"
+      },
+      {
+        "name":"github",
+        "url":"https://github.com/GouthamGuna/Portfolio-.com",
+        "className":"fa fa-github"
+      }
+    ]
+  },
+  "resume":{
+    "skillmessage":"“Live as if you were to die tomorrow. Learn as if you were to live forever.”",
+    "education":[
+      {
+        "school":"Under Graduate",
+        "degree":"B.E. Electrical and Electronics Engineering",
+        "graduated":"2017 - 2020",
+        "description":"Learned Muthayammal Engineering College - Affiliated to Anna University (Chennai)."
+      },
+      {
+        "school":"State Board of Technical Education and Training",
+        "degree":"Electrical and Electronics Engineering",
+        "graduated":"2014 - 2017",
+        "description":"Learned  Maruthi Polytechnic College - Affiliated to DIRECTORATE OF TECHNICAL EDUCATION (TAMIL NADU)."
+      },
+      {
+        "school":"Secondary School Leaving Certificate",
+        "degree":"SSLC certificate",
+        "graduated":"April - 2014",
+        "description":"Learned  Sri Saradha Mandir Matric. Hr. Sec. School (Salem)."
+      }
+    ],
+    "work":[
+      {
+        "company":"Centris Infotech Pvt Ltd",
+        "title":"Technical Java Full stack developer",
+        "years":"April 2022 - Present",
+        "description":"I do End-to-End service, create both front-end components, such as user interfaces and back-end components, such as application code and databases."
+      },
+      {
+        "company":"Kaashiv InfoTech",
+        "title":"Internship - Java Full stack developer",
+        "years":"June 2021 - August  2021",
+        "description":"I am Learned, & working front-end components Html, Js, Jsp."
+      }
+    ],
+    "project":[
+      {
+        "coordinator":"Coursera Project Network",
+        "name":"AWS Cloudfront, S3",
+        "years":"April 2022",
+        "description":"Create S3 buckets and Cloudfront distribution will do Update origins & behaviors and Setup error page,  URL invalidations, finally restrictions & Terminate."
+      },
+      {
+        "coordinator":"AWS Training and Certification",
+        "name":"AWS Foundations: Securing Your AWS Cloud",
+        "years":"April 2022",
+        "description":"Protecting the Infrastructure that runs all of the services offered in the AWS Cloud. "
+      },
+      {
+        "coordinator":"Coursera Project Network",
+        "name":"Build a Business Architecture using AWS Organization",
+        "years":"March 2021",
+        "description":"Manage multiple AWS Accounts in separate environments. Establish boundaries that define the policies, services, and resources used across grouped organizational units (OUs)."
+      }
+    ],
+    "skills":[
+      {
+        "name":"Front end Languages: HTML & CSS , jquery & React.",
+        "level":"70%"
+      },
+      {
+        "name":"Frameworks: struts to Tiles, Spring Boot.",
+        "level":"60%"
+      },
+      {
+        "name":"Back end Languages: Core Java, J2EE.",
+        "level":"60%"
+      },
+      {
+        "name":"Databases: SQL.",
+        "level":"30%"
+      }
+    ]
+  },
+  "portfolio":{
+    "projects": [
+      {
+        "title":"Securing Your AWS Cloud",
+        "category":"AWS Training and Certification",
+        "image":"01.jpg",
+        "url":"#"
+      },
+      {
+        "title":" Business Architecture using AWS Organization",
+        "category":"Coursera Project Network",
+        "image":"02.jpg",
+        "url":"#"
+      },
+      {
+        "title":"AWS Cloudfront, S3",
+        "category":"Coursera Project Network",
+        "image":"03.jpg",
+        "url":"#"
+      },
+      {
+        "title":"Internship",
+        "category":"Kaashiv InfoTech",
+        "image":"04.jpg",
+        "url":"#"
+      },
+      {
+        "title":"Java Certification",
+        "category":"simplilearn",
+        "image":"05.jpg",
+        "url":"#"
+      }
+    ]
+  }
+}
