@@ -17,15 +17,13 @@
   * After editing run the following bash commands:
   
           npm install
-        
-        
+          
           npm start
   
  * To deploy website, run:
   
           npm run build
-          
-          
+         
           npm run deploy
   
 * Congrats your site is up and running. To see it live, visit:
