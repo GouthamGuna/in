@@ -16,7 +16,7 @@
       
       * Angular CLI: 13.2.5
       
-      * Package                      Version
+      * Package                          Version
         ------------------------------------------------------
         @angular-<user-ver>/architect    0.1302.5 (cli-only)
         @angular-<user-ver>/core         13.2.5   (cli-only)
