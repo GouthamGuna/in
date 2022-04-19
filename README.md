@@ -1,5 +1,7 @@
 # Developer's Portfolio.
-  
+
+    [![pages-build-deployment](https://github.com/GouthamGuna/in/actions/workflows/pages/pages-build-deployment/badge.svg?branch=gh-pages&event=check_run)]       (https://github.com/GouthamGuna/in/actions/workflows/pages/pages-build-deployment)
+
    * It is a personal static website/portfolio template hosted with GitHub Pages, built to showcase my recent projects.
    
        => Site URL / Demo: https://gouthamguna.github.io/in/ using (React).
