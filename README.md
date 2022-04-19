@@ -1,6 +1,4 @@
-# Developer's Portfolio.
-
-    ![pages-build-deployment](https://github.com/GouthamGuna/in/actions/workflows/pages/pages-build-deployment/badge.svg)      
+# Developer's Portfolio.     
 
    * It is a personal static website/portfolio template hosted with GitHub Pages, built to showcase my recent projects.
    
