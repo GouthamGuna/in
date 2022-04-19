@@ -19,9 +19,9 @@
       * Package                      Version
         ------------------------------------------------------
         @angular-<user-ver>/architect    0.1302.5 (cli-only)
-        @angular-<user-ver>/core         13.2.5 (cli-only)
-        @angular-<user-ver>/schematics   13.2.5 (cli-only)
-        @schematics/angular              13.2.5 (cli-only)
+        @angular-<user-ver>/core         13.2.5   (cli-only)
+        @angular-<user-ver>/schematics   13.2.5   (cli-only)
+        @schematics/angular              13.2.5   (cli-only)
         
       
 # Setup And Deployment 🔧
