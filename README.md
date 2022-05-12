@@ -30,7 +30,7 @@
 
   * Clone the forked repo from your account using:
   
-           git clone https://github.com/<your-username>/home.git
+           git clone https://github.com/<your-username>/in.git
   
   * After editing run the following bash commands:
   
@@ -46,4 +46,4 @@
   
 * Congrats your site is up and running. To see it live, visit:
   
-         https://<your-username>.github.io/home
+         https://<your-username>.github.io/in
