@@ -30,7 +30,7 @@
       },
       {
         "name":"linkedin",
-        "url":"https://www.linkedin.com/login",
+        "url":"https://in.linkedin.com/in/gowtham-sankar-gunasekaran-a0a65431b",
         "className":"fa fa-linkedin"
       },
       {
@@ -68,17 +68,17 @@
       }
     ],
     "work":[
-      {
-        "company":"Centris Infotech Pvt Ltd",
-        "title":"Technical Java Full stack developer",
-        "years":"April 2022 - Present",
-        "description":"I do End-to-End service, create both front-end components, such as user interfaces and back-end components, such as application code and databases."
+	  {
+        "company":"Renault Nissan Technology & Business Centre India via Onward Technologies",
+        "title":"Software Developer",
+        "years":"August 2024 - Present",
+        "description":"Dynamic full-stack developer with nearly 4 years of experience leading and managing multiple teams to deliver robust, scalable software solutions. Adept at both frontend and backend development, I combine technical expertise with strong leadership and collaboration skills. I am passionate about open-source contributions and eager to bring my skills to innovative teams abroad."
       },
       {
-        "company":"Kaashiv InfoTech",
-        "title":"Internship - Java Full stack developer",
-        "years":"June 2021 - August  2021",
-        "description":"I am Learned, & working front-end components Html, Js, Jsp."
+        "company":"CERP Software Solutions Pvt Ltd",
+        "title":"Java Full stack developer",
+        "years":"August 2021 - August 2024",
+        "description":"I do End-to-End service, create both front-end components, such as user interfaces and back-end components, such as application code and databases."
       }
     ],
     "project":[
@@ -103,20 +103,20 @@
     ],
     "skills":[
       {
-        "name":"Front end Languages: HTML & CSS , jquery & React.",
-        "level":"70%"
+        "name":"Front end Languages: HTML & CSS , jquery & Angular (web framework).",
+        "level":"80%"
       },
       {
-        "name":"Frameworks: struts to Tiles, Spring Boot.",
-        "level":"60%"
+        "name":"Frameworks: Spring MVC, Spring Boot",
+        "level":"80%"
       },
       {
         "name":"Back end Languages: Core Java, J2EE.",
-        "level":"60%"
+        "level":"80%"
       },
       {
         "name":"Databases: SQL.",
-        "level":"30%"
+        "level":"80%"
       }
     ]
   },
