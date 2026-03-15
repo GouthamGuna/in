@@ -1,0 +1,161 @@
+<div class="tech-bg">
+  @for (icon of techIcons; track icon.class) {
+    <i [class]="'floating-icon ' + icon.class" [style.left]="icon.left" [style.animationDelay]="icon.delay"></i>
+  }
+</div>
+
+<header class="navbar glass-card">
+  <div class="nav-content">
+    <div class="logo text-gradient">GS Portfolio</div>
+    <nav>
+      <a href="#experience">Experience</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#certificates">Certificates</a>
+      <a href="https://drive.google.com/uc?export=download&id=16xO0McptrIzeAz1MCVImBDbJUj8oU-bi" target="_blank">CV</a>
+      <button class="theme-toggle" (click)="toggleTheme()" aria-label="Toggle Theme">
+        @if (isDarkMode()) {
+          <span>🌙</span>
+        } @else {
+          <span>☀️</span>
+        }
+      </button>
+      <a href="#contact" class="btn-primary">Hire Me</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <app-hero></app-hero>
+  <app-experience></app-experience>
+  <app-skills></app-skills>
+  <app-projects></app-projects>
+  <app-certificates></app-certificates>
+  <app-contact></app-contact>
+</main>
+
+<footer class="footer">
+  <div class="footer-content">
+    <p>&copy; {{ currentYear }} Gowtham Sankar Gunasekaran. All rights reserved.</p>
+    <div class="socials">
+      <a href="https://github.com/GouthamGuna" target="_blank">GitHub</a>
+      <a href="https://in.linkedin.com/in/gowtham-sankar-gunasekaran-a0a65431b" target="_blank">LinkedIn</a>
+      <a href="mailto:ggowthamsankar@gmail.com">Email</a>
+    </div>
+  </div>
+</footer>
+
+<button 
+  class="scroll-top glass-card" 
+  [class.show]="showScrollToTop()" 
+  (click)="scrollToTop()" 
+  aria-label="Scroll to top"
+>
+  <i class="fa-solid fa-arrow-up"></i>
+</button>
+
+<style>
+  .navbar {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    right: 20px;
+    z-index: 1000;
+    padding: 15px 40px;
+    border-radius: 50px;
+  }
+  .nav-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+  }
+  .logo {
+    font-size: 1.5rem;
+    font-weight: 800;
+    font-family: 'Outfit', sans-serif;
+  }
+  nav {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+  }
+  nav a {
+    color: var(--text-secondary);
+    text-decoration: none;
+    font-weight: 500;
+    transition: var(--transition);
+  }
+  nav a:hover {
+    color: var(--accent-color);
+  }
+  .footer {
+    padding: 60px 20px 100px; /* Increased bottom padding to prevent overlap with floating button */
+    border-top: 1px solid var(--glass-border);
+    margin-top: 100px;
+  }
+  .footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--text-secondary);
+  }
+  .socials {
+    display: flex;
+    gap: 20px;
+    margin-right: 20px; /* Added margin to keep links away from the scroll button area */
+  }
+  .socials a {
+    color: var(--text-secondary);
+    text-decoration: none;
+    transition: var(--transition);
+    padding: 5px 10px;
+  }
+  .socials a:hover {
+    color: var(--accent-color);
+  }
+
+  @media (max-width: 768px) {
+    nav { display: none; }
+    .footer-content { flex-direction: column; gap: 20px; text-align: center; }
+    .socials { margin-right: 0; }
+  }
+
+  .scroll-top {
+    position: fixed;
+    bottom: 40px; /* Moved slightly up */
+    right: 40px;  /* Moved slightly left */
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    color: var(--accent-color);
+    cursor: pointer;
+    z-index: 1000;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(20px);
+    transition: all 0.3s ease;
+    border: 1px solid var(--glass-border);
+  }
+
+  .scroll-top.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+
+  .scroll-top:hover {
+    background: var(--accent-color);
+    color: white;
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px var(--accent-glow);
+  }
+</style>

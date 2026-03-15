@@ -1,0 +1,216 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;600;800&display=swap');
+
+:root {
+  /* Default Dark Mode */
+  --bg-color: #0f172a;
+  --bg-card: rgba(30, 41, 59, 0.7);
+  --text-primary: #f8fafc;
+  --text-secondary: #94a3b8;
+  --accent-color: #8b5cf6;
+  --accent-hover: #7c3aed;
+  --accent-glow: rgba(139, 92, 246, 0.3);
+  --glass-border: rgba(255, 255, 255, 0.1);
+  --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  --nav-bg: rgba(15, 23, 42, 0.8);
+}
+
+[data-theme="light"] {
+  --bg-color: #f8fafc;
+  --bg-card: rgba(255, 255, 255, 0.8);
+  --text-primary: #0f172a;
+  --text-secondary: #475569;
+  --accent-color: #7c3aed;
+  --accent-hover: #6d28d9;
+  --accent-glow: rgba(124, 58, 237, 0.15);
+  --glass-border: rgba(15, 23, 42, 0.1);
+  --nav-bg: rgba(255, 255, 255, 0.8);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-primary);
+  line-height: 1.6;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+h1, h2, h3, h4 {
+  font-family: 'Outfit', sans-serif;
+  font-weight: 800;
+}
+
+section {
+  padding: 100px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.glass-card {
+  background: var(--bg-card);
+  backdrop-filter: blur(12px);
+  border: 1px solid var(--glass-border);
+  border-radius: 16px;
+  padding: 24px;
+  transition: var(--transition);
+}
+
+.glass-card:hover {
+  transform: translateY(-5px);
+  border-color: var(--accent-color);
+  box-shadow: 0 10px 30px -10px var(--accent-glow);
+}
+
+.btn-primary {
+  background: var(--accent-color);
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transition);
+  text-decoration: none;
+  display: inline-block;
+}
+
+.btn-primary:hover {
+  background: var(--accent-hover);
+  box-shadow: 0 0 20px var(--accent-glow);
+}
+
+.text-gradient {
+  background: linear-gradient(135deg, var(--text-primary) 0%, var(--accent-color) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-color);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--accent-color);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--accent-hover);
+}
+
+.theme-toggle {
+  background: var(--bg-card);
+  border: 1px solid var(--glass-border);
+  color: var(--text-primary);
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 1.2rem;
+  transition: var(--transition);
+}
+
+.theme-toggle:hover {
+  border-color: var(--accent-color);
+  color: var(--accent-color);
+}
+
+/* Floating Tech Icons Background */
+.tech-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  overflow: hidden;
+  pointer-events: none;
+  opacity: 0.05;
+}
+
+.floating-icon {
+  position: absolute;
+  font-size: 2rem;
+  color: var(--text-primary);
+  animation: float 20s infinite linear;
+  filter: grayscale(1);
+}
+
+@keyframes float {
+  0% { transform: translateY(110vh) rotate(0deg); opacity: 0; }
+  10% { opacity: 1; }
+  90% { opacity: 1; }
+  100% { transform: translateY(-10vh) rotate(360deg); opacity: 0; }
+}
+
+[data-theme="light"] .tech-bg {
+  opacity: 0.1;
+}
+
+/* Orientation and Rotation Optimizations */
+@media (orientation: portrait) {
+  section {
+    padding: 60px 15px;
+  }
+  .section-title {
+    font-size: 2rem;
+    margin-bottom: 30px;
+  }
+}
+
+@media (orientation: landscape) and (max-height: 500px) {
+  .navbar {
+    top: 0;
+    left: 0;
+    right: 0;
+    border-radius: 0;
+    padding: 8px 20px;
+  }
+  section {
+    padding: 40px 15px;
+  }
+  .hero {
+    min-height: 100vh;
+    padding-top: 60px;
+  }
+  .name {
+    font-size: 2.5rem;
+  }
+  .image-wrapper {
+    width: 200px;
+    height: 200px;
+  }
+}
+
+/* Device Rotation Transitions */
+@media screen and (max-device-width: 1024px) {
+  body, section, .hero, .glass-card, .navbar {
+    transition: var(--transition), padding 0.4s ease, margin 0.4s ease;
+  }
+}
+
+/* High Precision Orientation Support */
+@supports (padding: env(safe-area-inset-top)) {
+  body {
+    padding-top: env(safe-area-inset-top);
+    padding-bottom: env(safe-area-inset-bottom);
+    padding-left: env(safe-area-inset-left);
+    padding-right: env(safe-area-inset-right);
+  }
+}
