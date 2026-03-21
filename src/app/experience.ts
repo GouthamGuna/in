@@ -141,7 +141,7 @@ export class ExperienceComponent {
       role: 'B.E. in Electrical & Electronics',
       company: 'Muthayammal Engineering College (Anna University)',
       period: '2017 — 2020',
-      highlights: ['Degree completion with a focus on core engineering and software fundamentals.']
+      highlights: ['Completion of a degree emphasizing core fundamentals of electrical and electronic engineering.']
     },
     {
       role: 'Diploma in Electrical & Electronics',

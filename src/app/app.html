@@ -1,27 +1,22 @@
-<div class="tech-bg">
-  @for (icon of techIcons; track icon.class) {
-    <i [class]="'floating-icon ' + icon.class" [style.left]="icon.left" [style.animationDelay]="icon.delay"></i>
-  }
-</div>
-
 <header class="navbar glass-card">
   <div class="nav-content">
     <div class="logo text-gradient">GS Portfolio</div>
-    <nav>
+    <nav class="nav-links">
       <a href="#experience">Experience</a>
       <a href="#skills">Skills</a>
       <a href="#projects">Projects</a>
       <a href="#certificates">Certificates</a>
-      <a href="https://drive.google.com/uc?export=download&id=16xO0McptrIzeAz1MCVImBDbJUj8oU-bi" target="_blank">CV</a>
-      <button class="theme-toggle" (click)="toggleTheme()" aria-label="Toggle Theme">
-        @if (isDarkMode()) {
-          <span>🌙</span>
-        } @else {
-          <span>☀️</span>
-        }
-      </button>
+      <a href="https://drive.google.com/file/d/1yxqtUDdhDhut6ArR7nAljWkrB--4lWYT/view?usp=sharing" target="_blank">CV</a>
       <a href="#contact" class="btn-primary">Hire Me</a>
     </nav>
+    <!-- Theme toggle always visible in navbar, right side -->
+    <button class="theme-toggle" (click)="toggleTheme()" aria-label="Toggle Theme">
+      @if (isDarkMode()) {
+        <span>🌙</span>
+      } @else {
+        <span>☀️</span>
+      }
+    </button>
   </div>
 </header>
 
@@ -54,6 +49,13 @@
   <i class="fa-solid fa-arrow-up"></i>
 </button>
 
+<!-- Tech icons background — placed last in DOM to avoid flash/mess on load -->
+<div class="tech-bg">
+  @for (icon of techIcons; track icon.class) {
+    <i [class]="'floating-icon ' + icon.class" [style.left]="icon.left" [style.animationDelay]="icon.delay"></i>
+  }
+</div>
+
 <style>
   .navbar {
     position: fixed;
@@ -61,7 +63,7 @@
     left: 20px;
     right: 20px;
     z-index: 1000;
-    padding: 15px 40px;
+    padding: 12px 30px;
     border-radius: 50px;
   }
   .nav-content {
@@ -71,28 +73,38 @@
     max-width: 1200px;
     margin: 0 auto;
     width: 100%;
+    gap: 16px;
   }
   .logo {
     font-size: 1.5rem;
     font-weight: 800;
     font-family: 'Outfit', sans-serif;
+    flex-shrink: 0;
   }
-  nav {
+  .nav-links {
     display: flex;
     align-items: center;
-    gap: 30px;
+    gap: 28px;
+    flex: 1;
+    justify-content: flex-end;
   }
-  nav a {
+  .nav-links a {
     color: var(--text-secondary);
     text-decoration: none;
     font-weight: 500;
     transition: var(--transition);
+    white-space: nowrap;
   }
-  nav a:hover {
+  .nav-links a:hover {
     color: var(--accent-color);
   }
+  /* theme-toggle is always in the navbar, after nav-links */
+  .theme-toggle {
+    flex-shrink: 0;
+  }
+
   .footer {
-    padding: 60px 20px 100px; /* Increased bottom padding to prevent overlap with floating button */
+    padding: 60px 20px 100px;
     border-top: 1px solid var(--glass-border);
     margin-top: 100px;
   }
@@ -107,7 +119,7 @@
   .socials {
     display: flex;
     gap: 20px;
-    margin-right: 20px; /* Added margin to keep links away from the scroll button area */
+    margin-right: 20px;
   }
   .socials a {
     color: var(--text-secondary);
@@ -119,16 +131,25 @@
     color: var(--accent-color);
   }
 
+  /* ── Tablet (≤1024px): hide nav links, keep logo + toggle ── */
+  @media (max-width: 1024px) {
+    .nav-links { display: none; }
+    .footer-content { flex-direction: column; gap: 20px; text-align: center; }
+    .socials { margin-right: 0; }
+  }
+
+  /* ── Mobile (≤768px): same – logo left, toggle right ── */
   @media (max-width: 768px) {
-    nav { display: none; }
+    .navbar { padding: 10px 20px; top: 12px; left: 12px; right: 12px; }
+    .logo { font-size: 1.25rem; }
     .footer-content { flex-direction: column; gap: 20px; text-align: center; }
     .socials { margin-right: 0; }
   }
 
   .scroll-top {
     position: fixed;
-    bottom: 40px; /* Moved slightly up */
-    right: 40px;  /* Moved slightly left */
+    bottom: 40px;
+    right: 40px;
     width: 50px;
     height: 50px;
     border-radius: 50%;

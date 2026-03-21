@@ -141,11 +141,18 @@ section {
   z-index: -1;
   overflow: hidden;
   pointer-events: none;
-  opacity: 0.05;
+  opacity: 0;
+  /* Fade in after page content renders — prevents messy flash on load */
+  animation: techBgFadeIn 0.1s ease 0.8s forwards;
+}
+
+@keyframes techBgFadeIn {
+  to { opacity: 0.05; }
 }
 
 .floating-icon {
   position: absolute;
+  bottom: -10vh;
   font-size: 2rem;
   color: var(--text-primary);
   animation: float 20s infinite linear;
@@ -153,14 +160,18 @@ section {
 }
 
 @keyframes float {
-  0% { transform: translateY(110vh) rotate(0deg); opacity: 0; }
-  10% { opacity: 1; }
-  90% { opacity: 1; }
-  100% { transform: translateY(-10vh) rotate(360deg); opacity: 0; }
+  0% { transform: translateY(0) rotate(0deg); opacity: 0; }
+  5% { opacity: 1; }
+  95% { opacity: 1; }
+  100% { transform: translateY(-120vh) rotate(360deg); opacity: 0; }
 }
 
 [data-theme="light"] .tech-bg {
-  opacity: 0.1;
+  animation: techBgFadeInLight 0.1s ease 0.8s forwards;
+}
+
+@keyframes techBgFadeInLight {
+  to { opacity: 0.1; }
 }
 
 /* Orientation and Rotation Optimizations */

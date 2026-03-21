@@ -15,7 +15,7 @@ import { Component } from '@angular/core';
         </p>
         <div class="cta">
           <a href="#contact" class="btn-primary">Hire Me</a>
-          <a href="https://drive.google.com/uc?export=download&id=16xO0McptrIzeAz1MCVImBDbJUj8oU-bi" target="_blank" class="btn-outline">Download CV</a>
+          <a href="https://drive.google.com/file/d/1yxqtUDdhDhut6ArR7nAljWkrB--4lWYT/view?usp=sharing" target="_blank" class="btn-outline">Download CV</a>
         </div>
         <div class="social-links">
           <a href="https://github.com/GouthamGuna" target="_blank" title="GitHub">
